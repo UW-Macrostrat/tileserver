@@ -34,7 +34,7 @@ async def set_cached_tile(
             y=tile.y,
             z=tile.z,
             tile=content,
-            layers=[layer],
+            layer=layer,
             profile=layer,
         )
         await conn.execute(q, *p)

@@ -19,7 +19,9 @@ tile_settings = TileSettings()
 class StoredFunction(Function):
     type: str = "StoredFunction"
 
-    def render_query(self, tile: morecantile.Tile, tms: morecantile.TileMatrixSet, **kwargs: Any):
+    def render_query(
+        self, tile: morecantile.Tile, tms: morecantile.TileMatrixSet, **kwargs: Any
+    ):
         # Build the query
         sql_query = clauses.Select(
             Func(
@@ -53,7 +55,6 @@ class StoredFunction(Function):
             )
 
         q, p = self.render_query(tile, tms, **kwargs)
-        print(f"Query: {q}, Params: {p}")
         async with pool.acquire() as conn:
             transaction = conn.transaction()
             await transaction.start()
