@@ -1,5 +1,8 @@
 # Macrostrat's tile server
 
+**PUBLIC ARCHIVE**:
+As of bd98ab1, this repository has been integrated into the [`UW-Macrostrat/macrostrat`](https://github.com/UW-Macrostrat/macrostrat) monorepo.
+
 *A dynamic tile server for geologic maps*
 
 # Version 2 changes
